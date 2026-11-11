@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design no Figma — SENN AI-X Logistics</title>
+<meta name="description" content="Telas e biblioteca de componentes da plataforma SENN AI-X Logistics criadas no Figma pela equipe Puro Talento.">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --navy-900:#0b1f33;--navy-700:#163a5c;--amber:#f59e0b;--amber-600:#d97706;
+  --bg:#f3f5f9;--surface:#fff;--border:#e2e8f0;--text:#0f172a;--text-2:#475569;--text-3:#64748b;
+  --ok:#15803d;--ok-bg:#dcfce7;--warn:#b45309;--warn-bg:#fef3c7;
+  --radius:12px;--shadow:0 1px 2px rgba(15,23,42,.06),0 6px 24px rgba(15,23,42,.07);
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0b1522;--surface:#111e2e;--border:#22344a;--text:#e6edf5;--text-2:#a9b8c9;--text-3:#8496aa;
+  --ok:#4ade80;--ok-bg:#12321f;--warn:#fbbf24;--warn-bg:#3a2a0b;--shadow:0 1px 2px rgba(0,0,0,.3),0 6px 24px rgba(0,0,0,.25);
+}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
+header{background:linear-gradient(160deg,var(--navy-900),var(--navy-700));color:#fff;padding:24px 0 40px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;text-decoration:none}
+.brand img{width:36px;height:36px}
+.back{color:#d4deea;font-size:.92rem}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;margin:28px 0 10px;letter-spacing:-.02em}
+.lead{color:#d4deea;max-width:720px;margin:0}
+section{padding:40px 0 0}
+h2{font-size:1.4rem;margin:0 0 6px}
+.sub{color:var(--text-2);margin:0 0 20px;max-width:760px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+figure{margin:0}
+.frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:var(--surface)}
+.frame img{width:100%}
+figcaption{font-size:.86rem;color:var(--text-3);margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border)}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3)}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pill{display:inline-block;font-size:.78rem;font-weight:600;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.ok{background:var(--ok-bg);color:var(--ok)} .warn{background:var(--warn-bg);color:var(--warn)}
+.notice{border-left:5px solid var(--amber)}
+.notice p{margin:0;color:var(--text-2)}
+code{font-family:var(--mono);font-size:.88em}
+footer{margin-top:56px;background:var(--navy-900);color:#b9c7d6;padding:28px 0;font-size:.9rem}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../"><img src="../img/logo.svg" alt="" width="36" height="36">SENN AI-X Logistics</a>
+      <a class="back" href="../">← Voltar para a apresentação</a>
+    </div>
+    <h1>Design no Figma</h1>
+    <p class="lead">A biblioteca de componentes e as telas da plataforma foram feitas no Figma a partir dos tokens do código (<code>app.css</code>), com a fonte Inter e dados fictícios de demonstração.</p>
+  </div>
+</header>
+<main>
+  <section>
+    <div class="wrap">
+      <div class="card notice" role="note"><p><strong>Situação em 21/10/2026:</strong> os fundamentos, os componentes e as telas de Login e Painel gerencial estão prontos no Figma. As demais telas aguardam a renovação da cota de chamadas do Figma (o plano Starter com assento View permite 20 chamadas por mês ao servidor MCP). Enquanto isso, as 14 telas estão disponíveis como <a href="../telas/"><strong>protótipos HTML navegáveis</strong></a>, com os mesmos tokens e componentes.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-painel">
+    <div class="wrap">
+      <h2 id="t-painel">02 · Painel gerencial</h2>
+      <p class="sub">A tela é montada com os componentes Barra lateral, Barra superior, Campo, Botão, Cartão KPI, Selo e Item de alerta, e todos os gráficos usam os tokens de cor.</p>
+      <figure><div class="frame"><img src="02-painel-gerencial.jpg" alt="Tela do painel gerencial no Figma com indicadores de entrega no prazo, custo por entrega, quilômetros, ocupação da frota, gráficos por dia, status e região, tabela de desempenho por veículo e alertas abertos" width="883" height="1000"></div>
+        <figcaption>Exportação do Figma, com dados fictícios do banco de demonstração.</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-comp">
+    <div class="wrap">
+      <h2 id="t-comp">Componentes e ícones</h2>
+      <p class="sub">Os componentes têm variantes e propriedades de texto, de visibilidade e de troca de ícone, e estão ligados às variáveis da coleção <em>SENN AI-X Tokens</em>.</p>
+      <div class="grid">
+        <figure><div class="frame"><img src="componentes.jpg" alt="Biblioteca de componentes no Figma: botões, selos, avatar, cartões KPI, campos, item de navegação, barra lateral e barra superior" width="819" height="1400" loading="lazy"></div>
+          <figcaption>Biblioteca de componentes.</figcaption></figure>
+        <figure><div class="frame"><img src="icones.jpg" alt="Grade com 40 ícones de traço e o logotipo" width="900" height="312" loading="lazy"></div>
+          <figcaption>Os 40 ícones de traço e o logotipo.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-status">
+    <div class="wrap">
+      <h2 id="t-status">Telas previstas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">#</th><th scope="col">Tela</th><th scope="col">Situação</th></tr></thead>
+          <tbody>
+            <tr><td>01</td><td>Login</td><td><span class="pill ok">Pronta no Figma</span></td></tr>
+            <tr><td>02</td><td>Painel gerencial</td><td><span class="pill ok">Pronta no Figma</span></td></tr>
+            <tr><td>03–11</td><td>Pedidos, Importar CSV, Planejar rotas, Rastreamento, Previsão, Riscos, Alertas, Análise + assistente, Frota</td><td><span class="pill ok">Protótipo HTML</span> <span class="pill warn">Figma: aguardando cota</span></td></tr>
+            <tr><td>M1–M3</td><td>App do motorista: minhas rotas, rota, registrar entrega</td><td><span class="pill ok">Protótipo HTML</span> <span class="pill warn">Figma: aguardando cota</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">Equipe Puro Talento · SENAI DEV EXPERIENCE 2026 · Módulo A</div></footer>
+</body>
+</html>
